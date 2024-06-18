@@ -1,10 +1,11 @@
-function getElementWidth(content, padding, border) {
-    return Number.parseFloat(content) + (Number.parseFloat(padding) *2) + (Number.parseFloat(border)*2)
-   
-    
-  
-    
-}
+function checkForSpam(message) {
+    const lowerCaseMessage = message.toLowerCase();
+    if (lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
 console.log(getElementWidth("50px", "8px", "4px")); // 74
